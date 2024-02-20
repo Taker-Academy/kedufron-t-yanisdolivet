@@ -4,6 +4,7 @@
 }
 
 body {
+    margin: 0;
     background-color: #f9f6ef;
 }
 
@@ -12,6 +13,9 @@ header {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    @media (max-width: 941px) {
+        flex-direction: column;
+    }
 }
 
 .logo_header {
@@ -19,15 +23,30 @@ header {
     margin-left: 3%;
     display: flex;
     flex-direction: row;
+    @media (max-width: 941px) {
+        margin: 0;
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+    }
+    @media (max-width: 518px) {
+        align-items: center;
+    }
 }
 
 .logo_header img {
-    width: 10vw;
+    width: 180px;
+    @media (max-width: 420px) {
+        width: 100px;
+    }
 }
 
 .brand_name {
     color: #e28b3c;
     text-align: center;
+    @media (max-width: 300px) {
+        display: none;
+    }
 }
 
 .brand_name h1 {
@@ -35,6 +54,9 @@ header {
     margin-top: 8%;
     font-family: ChildishFree;
     font-size: 100px;
+    @media (max-width: 518px) {
+        font-size: 50px;
+    }
 }
 
 .brand_name h3 {
@@ -51,6 +73,28 @@ header {
     flex-direction: row;
     width: 40%;
     padding-left: 10%;
+    @media (max-width: 941px) {
+        width: 100%;
+        justify-content: space-between;
+        padding: 0;
+        padding-top: 5%;
+    }
+}
+
+.pages div {
+    @media (max-width: 941px) {
+        border-bottom: 2px solid transparent;
+        width: 33.3%;
+        text-align: center;
+    }
+}
+
+.pages div:hover {
+    @media (max-width:941px) {
+        border-bottom: solid;
+        border-bottom-color: #ffd5aa;
+        border-bottom-width: 3px;
+    }
 }
 
 .pages a {
@@ -58,6 +102,10 @@ header {
     font-weight: bold;
     color: #e28b3c;
     font-size: 1.5vw;
+    @media (max-width: 941px) {
+        text-align: center;
+        font-size: 25px;
+    }
 }
 
 .pages img {
@@ -66,22 +114,34 @@ header {
     padding-left: 5%;
     padding-right: 5%;
     vertical-align:text-bottom;
+    @media (max-width: 941px) {
+        visibility: visible;
+        display: none;
+    }
 }
-
 
 .faq:hover img {
     visibility: visible;
     opacity: 1;
+    @media (max-width: 941px) {
+        display: none;
+    }
 }
 
 .contact:hover img {
     visibility: visible;
     opacity: 1;
+    @media (max-width: 941px) {
+        display: none;
+    }
 }
 
 .panier:hover img {
     visibility: visible;
     opacity: 1;
+    @media (max-width: 941px) {
+        display: none;
+    }
 }
 
 
