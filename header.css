@@ -1,0 +1,87 @@
+@font-face {
+    font-family: ChildishFree;
+    src: url(ressources/font/ChildishFree.otf);
+}
+
+body {
+    background-color: #f9f6ef;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo_header {
+    margin-top: 2%;
+    margin-left: 3%;
+    display: flex;
+    flex-direction: row;
+}
+
+.logo_header img {
+    width: 10vw;
+}
+
+.brand_name {
+    color: #e28b3c;
+    text-align: center;
+}
+
+.brand_name h1 {
+    margin: 0;
+    margin-top: 8%;
+    font-family: ChildishFree;
+    font-size: 100px;
+}
+
+.brand_name h3 {
+    margin: 0;
+    margin-top: 3%;
+    padding-bottom: 2%;
+    letter-spacing: 0.4vw;
+}
+
+.pages {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    flex-direction: row;
+    width: 40%;
+    padding-left: 10%;
+}
+
+.pages a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #e28b3c;
+    font-size: 1.5vw;
+}
+
+.pages img {
+    visibility: hidden;
+    width: 8%;
+    padding-left: 5%;
+    padding-right: 5%;
+    vertical-align:text-bottom;
+}
+
+
+.faq:hover img {
+    visibility: visible;
+    opacity: 1;
+}
+
+.contact:hover img {
+    visibility: visible;
+    opacity: 1;
+}
+
+.panier:hover img {
+    visibility: visible;
+    opacity: 1;
+}
+
+
