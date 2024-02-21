@@ -3,6 +3,16 @@
     src: url(ressources/font/ChildishFree.otf);
 }
 
+@font-face {
+    font-family: EazyChat;
+    src: url(ressources/font/Eazy\ Chat.ttf);
+}
+
+@font-face {
+    font-family: WinterDrink;
+    src: url(ressources/font/Winter\ Drink.ttf);
+}
+
 body {
     margin: 0;
     background-color: #f9f6ef;
@@ -102,6 +112,7 @@ header {
     font-weight: bold;
     color: #e28b3c;
     font-size: 1.5vw;
+    font-family: EazyChat;
     @media (max-width: 941px) {
         text-align: center;
         font-size: 25px;
@@ -143,5 +154,4 @@ header {
         display: none;
     }
 }
-
 
