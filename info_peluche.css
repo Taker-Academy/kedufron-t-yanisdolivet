@@ -1,0 +1,78 @@
+@font-face {
+    font-family: ChildishFree;
+    src: url(ressources/font/ChildishFree.otf);
+}
+
+@font-face {
+    font-family: EazyChat;
+    src: url(ressources/font/Eazy\ Chat.ttf);
+}
+
+@font-face {
+    font-family: WinterDrink;
+    src: url(ressources/font/Winter\ Drink.ttf);
+}
+
+* {
+    margin: 0;
+}
+
+.info_sur_peluche {
+    margin-top: 5%;
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    margin-left:4%;
+    margin-right:4%;
+    justify-content: space-between;
+    background-color: #ffd4a9;
+    padding: 5%;
+    padding-left: 5%;
+    padding-right: 5%;
+    border-radius: 40px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.info_sur_peluche p {
+    text-align: justify;
+    padding-right: 10%;
+    font-family: WinterDrink;
+    font-size: 25px;
+}
+
+.info_sur_peluche img {
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    max-width: 30vw;
+}
+
+.premier_info, .deuxieme_info, .troisieme_info {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 5%;
+    background-color: #f9f6ef;
+    padding: 5%;
+    border-radius: 60px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transition: transform 330ms ease-in-out;
+}
+
+.premier_info:hover, .deuxieme_info:hover, .troisieme_info:hover {
+    transform: scale(1.03);
+}
+
+.deuxieme_info p {
+    padding-right: 0;
+    padding-left: 10%;
+}
+
+.deuxieme_info img {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+}
+
+.troisieme_info {
+    margin-bottom: 0;
+}
