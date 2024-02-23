@@ -1,0 +1,67 @@
+@font-face {
+    font-family: ChildishFree;
+    src: url(ressources/font/ChildishFree.otf);
+}
+
+@font-face {
+    font-family: EazyChat;
+    src: url(ressources/font/Eazy\ Chat.ttf);
+}
+
+@font-face {
+    font-family: WinterDrink;
+    src: url(ressources/font/Winter\ Drink.ttf);
+}
+
+@font-face {
+    font-family: LemonMilk;
+    src: url(ressources/font/Lemon\ Milk.otf);
+}
+
+@font-face {
+    font-family: TheStudentsTeacher;
+    src: url(ressources/font/TheStudentsTeacher-Regular.ttf);
+}
+
+* {
+    margin: 0;
+}
+
+.apercu_shop {
+    position: fixed;
+    right: 0;
+    top: 60px;
+    background-color: #e18c3b;
+    margin-right: 2%;
+    width: 25%;
+    border-radius: 20px;
+}
+
+.header_apercu_shop {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.header_apercu_shop h3 {
+    margin: 0;
+    padding-left: 8%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    font-size: 30px;
+    font-family: TheStudentsTeacher;
+    font-weight:1000;
+}
+
+.header_apercu_shop .sac-de-courses {
+    width: 15%;
+    padding-right: 8%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+
+
+.contenu_panier img {
+    width: auto;
+    max-height: 15vw;
+}

@@ -1,11 +1,11 @@
-var url = 'https://api.kedufront.juniortaker.com/item/';
+var url = 'https://api.kedufront.juniortaker.com/item/'
+const Click_times = new Array();
 
 const getAllNamesAndImage = async () => {
     try {
         const response = await axios.get(url);
         if (response.status === 200) {
             const data = response.data;
-            console.log(data);
             const itemsContainer = document.getElementsByClassName('achat_peluche')[0];
             data.forEach(data => {
                 const divPeluche = document.createElement('div');
@@ -18,7 +18,6 @@ const getAllNamesAndImage = async () => {
 
                 //assign data to element
                 h4Element.textContent = data.name;
-                console.log(url + 'picture/' + data._id);
                 imgElement.src = url + 'picture/' + data._id;
 
                 //name a class name
@@ -44,7 +43,6 @@ const getPrice = async () => {
         const response = await axios.get(url);
         if (response.status === 200) {
             const data = response.data;
-            console.log(data);
             data.forEach(data => {
                 const itemsContainer = document.getElementsByClassName('peluche')[data._id - 1];
 
@@ -90,5 +88,51 @@ const getPrice = async () => {
     } catch (error) {
         console.error('Axios error:', error);
         return null;
+    }
+};
+
+const getClicked = async ()  => {
+    const response = await axios.get(url);
+        if (response.status === 200) {
+            const data = response.data;
+            const ItemContainer = document.getElementsByClassName('contenu_panier')[0];
+            data.forEach(data => {
+                let index = data._id - 1;
+                Click_times[index - 1] = 1;
+                document.getElementsByClassName('buy')[index].onclick = function () {
+                    
+                    if (Click_times[index - 1] == 1) {
+                        //create elements
+                        var apercu_shop_name = document.createElement('p');
+                        var apercu_shop_price = document.createElement('p');
+                        var apercu_shop_times = document.createElement('p');
+                        var apercu_shop_image = document.createElement('img');
+
+                        //Assign data
+                        if (data.price % 1 == 0)
+                        data.price -= 0.01;
+    
+                        apercu_shop_name.textContent = data.name;
+                        apercu_shop_price.textContent = data.price.toFixed(2) + '€';
+                        apercu_shop_times.textContent = 'x' + Click_times[index - 1];
+                        apercu_shop_image.src = url + 'picture/' + data._id;
+    
+                        //Set class name
+                        apercu_shop_name.classList.add('apercu_shop_name');
+                        apercu_shop_price.classList.add('apercu_shop_price');
+                        apercu_shop_times.classList.add('apercu_shop_times');
+    
+                        //Append all element
+                        ItemContainer.appendChild(apercu_shop_name);
+                        ItemContainer.appendChild(apercu_shop_price);
+                        ItemContainer.appendChild(apercu_shop_times);
+                        ItemContainer.appendChild(apercu_shop_image);
+                    } else if (Click_times[index - 1] > 1) {
+                        var para = document.getElementsByClassName("apercu_shop_times")[0];
+                        para.innerHTML = 'x' + Click_times[index - 1];
+                    }
+                    Click_times[index - 1] += 1;
+            }
+        });
     }
 };
