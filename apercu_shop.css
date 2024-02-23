@@ -29,6 +29,7 @@
 
 .apercu_shop {
     position: fixed;
+    display: none;
     right: 0;
     top: 60px;
     background-color: #e18c3b;
@@ -42,10 +43,11 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    margin-top: 5%;
+    margin-bottom: 5%;
 }
 .header_apercu_shop h3 {
     margin: 0;
-    padding-left: 8%;
     padding-top: 5%;
     padding-bottom: 5%;
     font-size: 30px;
@@ -53,14 +55,26 @@
     font-weight:1000;
 }
 
+.title_shop {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
 .header_apercu_shop .sac-de-courses {
     width: 15%;
+    padding-left: 5%;
+    padding-right: 2%;
+}
+
+.header_apercu_shop .close_shop {
+    width: 5%;
     padding-right: 8%;
     padding-top: 5%;
     padding-bottom: 5%;
 }
 
-.contenu_panier img {
+.image_item {
     width: auto;
     max-height: 10vw;
     border-radius: 10% 10% 10% 10%;
@@ -71,9 +85,75 @@
 .items_apercu_shop {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 12%;
 }
 
 .text_apercu_shop {
     display: flex;
     flex-direction: column;
+    margin-right: 8%;
+    justify-content: space-between;
+    font-weight: bold;
 }
+
+.text_apercu_shop img {
+    width: 20px;
+}
+
+.footer_apercu_shop {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 8%;
+    align-items: center;
+}
+
+.footer_apercu_shop p {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.valider_panier {
+    align-items: center;
+    appearance: none;
+    background-color: #fff;
+    border-radius: 24px;
+    border-style: none;
+    box-shadow: rgba(0, 0, 0, .2) 0 3px 5px -1px,rgba(0, 0, 0, .14) 0 6px 10px 0,rgba(0, 0, 0, .12) 0 1px 18px 0;
+    box-sizing: border-box;
+    color: #3c4043;
+    cursor: pointer;
+    display: inline-flex;
+    fill: currentcolor;
+    font-family: "Google Sans",Roboto,Arial,sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    height: 30px;
+    justify-content: center;
+    letter-spacing: .25px;
+    line-height: normal;
+    margin-right: 10%;
+    max-width: 100%;
+    overflow: visible;
+    padding: 2px 24px;
+    position: relative;
+    text-align: center;
+    text-transform: none;
+    transition: box-shadow 280ms cubic-bezier(.4, 0, .2, 1),opacity 15ms linear 30ms,transform 270ms cubic-bezier(0, 0, .2, 1) 0ms;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    width: auto;
+    will-change: transform,opacity;
+    z-index: 0;
+}
+
+.valider_panier:hover {
+  background: #670209;
+  color: white;
+}
+

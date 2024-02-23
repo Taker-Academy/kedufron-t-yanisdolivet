@@ -44,19 +44,27 @@
                 </div>
                 <div class="panier">
                     <img src="ressources/images/ours-en-peluche.png" alt="footer_ancre">
-                    <a href="#" id="sinscrire">Panier</a>
+                    <a href="#" id="sinscrire" onclick="openPanier()">Panier</a>
                     <img src="ressources/images/ours-en-peluche.png" alt="footer_ancre">
                 </div>
             </div>
-            <div class="apercu_shop">
-                <div class="header_apercu_shop">
-                    <h3>Mon panier</h3>
-                    <img src="ressources/images/sac-de-courses.png" alt="logo sac de course" class="sac-de-courses">
-                </div>
-                <div class="contenu_panier">
-                </div>
-            </div>
         </header>
+        <div class="apercu_shop" id ="display_shop">
+            <div class="header_apercu_shop">
+                <div class="title_shop">
+                    <img src="ressources/images/sac-de-courses.png" alt="logo sac de course" class="sac-de-courses">
+                    <h3>Mon panier</h3>
+                </div>
+                <img src="ressources/images/fermer-la-croix.png" alt="croix pour fermer le shop" class="close_shop" onclick="closePanier()">
+            </div>
+            <div class="contenu_panier">
+            </div>
+            <div class="footer_apercu_shop">
+                <p class="total_apercu_shop">Total: 19.99€</p></script>
+                <script>setTotal()</script>
+                <button class="valider_panier">Valider Mon Panier</button>
+            </div>
+        </div>
         <div class="shop">
             <div class="achat_peluche">
             </div>

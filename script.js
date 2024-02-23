@@ -1,5 +1,6 @@
 var url = 'https://api.kedufront.juniortaker.com/item/'
 const Click_times = new Array();
+var total = 0;
 
 const getAllNamesAndImage = async () => {
     try {
@@ -91,9 +92,29 @@ const getPrice = async () => {
     }
 };
 
-function ManageElementApercuShop(ItemContainer, TextContainer, data, apercu_shop_name,
-    apercu_shop_price, apercu_shop_times, apercu_shop_image, index) {
+function ManageElementApercuShop(TextContainer, data, apercu_shop_name,
+    apercu_shop_price, apercu_shop_times, index, delete_image_apercu)
+{
+    //Assign data
+    if (data.price % 1 == 0) {
+        data.price -= 0.01;
+    }
 
+    apercu_shop_name.textContent = data.name;
+    apercu_shop_price.textContent = data.price.toFixed(2) + '€';
+    apercu_shop_times.textContent = 'x' + Click_times[index];
+    delete_image_apercu.src = './ressources/images/poubelle-de-recyclage.png';
+
+    //Set class name
+    apercu_shop_name.classList.add('apercu_shop_name');
+    apercu_shop_price.classList.add(`apercu_shop_price_${index}`);
+    apercu_shop_times.classList.add(`apercu_shop_time_${index}`);
+
+    //Append all element
+    TextContainer.appendChild(apercu_shop_name);
+    TextContainer.appendChild(apercu_shop_price);
+    TextContainer.appendChild(apercu_shop_times);
+    TextContainer.appendChild(delete_image_apercu);
 }
 
 const getClicked = async ()  => {
@@ -107,49 +128,68 @@ const getClicked = async ()  => {
 
                 //Button "Ajouter au panier" pressed
                 document.getElementsByClassName('buy')[index].onclick = function () {
-                    if (Click_times[index] == 1) {
+                if (Click_times[index] == 1) {
+                    //create elements
+                    var ItemContainer = document.createElement('div');
+                    var TextContainer = document.createElement('div');
+                    var apercu_shop_name = document.createElement('p');
+                    var apercu_shop_price = document.createElement('p');
+                    var apercu_shop_times = document.createElement('p');
+                    var delete_image_apercu = document.createElement('img');
+                    var apercu_shop_image = document.createElement('img');
 
-                        //Create Container
-                        var ItemContainer = document.createElement('div');
-                        ItemContainer.classList.add('items_apercu_shop');
-                        ContenuPanier.appendChild(ItemContainer);
-    
-                        var TextContainer = document.createElement('div');
-                        TextContainer.classList.add('text_apercu_shop');
-                        ItemContainer.appendChild(TextContainer);
-                        
-                        //create elements
-                        var apercu_shop_name = document.createElement('p');
-                        var apercu_shop_price = document.createElement('p');
-                        var apercu_shop_times = document.createElement('p');
-                        var apercu_shop_image = document.createElement('img');
+                    ItemContainer.classList.add('items_apercu_shop');
+                    ContenuPanier.appendChild(ItemContainer);
 
-                        //Assign data
-                        if (data.price % 1 == 0)
-                        data.price -= 0.01;
-                    
-                        apercu_shop_name.textContent = data.name;
-                        apercu_shop_price.textContent = data.price.toFixed(2) + '€';
-                        apercu_shop_times.textContent = 'x' + Click_times[index];
-                        apercu_shop_image.src = url + 'picture/' + data._id;
-                    
-                        //Set class name
-                        apercu_shop_name.classList.add('apercu_shop_name');
-                        apercu_shop_price.classList.add('apercu_shop_price');
-                        apercu_shop_times.classList.add(`apercu_shop_${index}`);
-                    
-                        //Append all element
-                        ItemContainer.appendChild(apercu_shop_image);
-                        TextContainer.appendChild(apercu_shop_name);
-                        TextContainer.appendChild(apercu_shop_price);
-                        TextContainer.appendChild(apercu_shop_times);
+                    apercu_shop_image.src = url + 'picture/' + data._id;
+                    apercu_shop_image.classList.add('image_item');
+                    ItemContainer.appendChild(apercu_shop_image);
+
+                    TextContainer.classList.add('text_apercu_shop');
+                    ItemContainer.appendChild(TextContainer);
+
+                    ManageElementApercuShop(TextContainer, data, apercu_shop_name,
+                        apercu_shop_price, apercu_shop_times, index, delete_image_apercu);
+
+                    total += data.price.toFixed(2);
     
-                    } else if (Click_times[index] > 1) {
-                        var para = document.getElementsByClassName(`apercu_shop_${index}`)[0];
-                        para.innerHTML = 'x' + Click_times[index];
+                } else if (Click_times[index] > 1) {
+                    var BuyItemTimes = document.getElementsByClassName(`apercu_shop_time_${index}`)[0];
+                    var PriceItemTimes = document.getElementsByClassName(`apercu_shop_price_${index}`)[0];
+                    var price = (data.price.toFixed(2) * Click_times[index])
+                    if (price % 1 == 0) {
+                        price -= 0.01;
                     }
-                    Click_times[index] += 1;
+                    BuyItemTimes.innerHTML = 'x' + Click_times[index];
+                    PriceItemTimes.innerHTML = price.toFixed(2) + '€';
+                    total += price;
+                }
+                Click_times[index] += 1;
             }
         });
     }
 };
+
+function openPanier() {
+    var panier = document.getElementsByClassName('apercu_shop');
+
+    panier = panier.length ? panier : [panier];
+    for (var index = 0; index < panier.length; index++) {
+      panier[index].style.display = 'block';
+    }
+}
+
+function closePanier() {
+    var panier = document.getElementsByClassName('apercu_shop');
+
+    panier = panier.length ? panier : [panier];
+    for (var index = 0; index < panier.length; index++) {
+      panier[index].style.display = 'none';
+    }
+}
+
+const setTotal = async () => {
+    var AmoutToPay = document.getElementsByClassName('total_apercu_shop')[0];
+
+    AmoutToPay.innerHTML = total;
+}
