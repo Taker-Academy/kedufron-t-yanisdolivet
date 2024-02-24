@@ -35,8 +35,11 @@
     background-color: #e18c3b;
     margin-right: 2%;
     width: 25%;
+    height: 90%;
     border-radius: 20px;
     z-index: 0;
+    overflow-y: scroll;
+    overflow-x: hidden;
 }
 
 .header_apercu_shop {
