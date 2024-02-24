@@ -36,6 +36,7 @@
     margin-right: 2%;
     width: 25%;
     border-radius: 20px;
+    z-index: 0;
 }
 
 .header_apercu_shop {
@@ -150,6 +151,7 @@
     width: auto;
     will-change: transform,opacity;
     z-index: 0;
+    visibility: hidden;
 }
 
 .valider_panier:hover {

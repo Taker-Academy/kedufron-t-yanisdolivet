@@ -1,6 +1,5 @@
 var url = 'https://api.kedufront.juniortaker.com/item/'
 const Click_times = new Array();
-var total = 0;
 
 const getAllNamesAndImage = async () => {
     try {
@@ -93,13 +92,14 @@ const getPrice = async () => {
 };
 
 function ManageElementApercuShop(TextContainer, data, apercu_shop_name,
-    apercu_shop_price, apercu_shop_times, index, delete_image_apercu)
+    apercu_shop_price, apercu_shop_times, index, delete_image_apercu,
+    apercu_shop, total)
 {
     //Assign data
     if (data.price % 1 == 0) {
         data.price -= 0.01;
     }
-
+    total += Number(data.price.toFixed(2));
     apercu_shop_name.textContent = data.name;
     apercu_shop_price.textContent = data.price.toFixed(2) + '€';
     apercu_shop_times.textContent = 'x' + Click_times[index];
@@ -115,13 +115,16 @@ function ManageElementApercuShop(TextContainer, data, apercu_shop_name,
     TextContainer.appendChild(apercu_shop_price);
     TextContainer.appendChild(apercu_shop_times);
     TextContainer.appendChild(delete_image_apercu);
+    apercu_shop.innerHTML = 'Total: ' + total.toFixed(2) + '€';
 }
 
 const getClicked = async ()  => {
     const response = await axios.get(url);
+    var total = 0;
         if (response.status === 200) {
             const data = response.data;
             const ContenuPanier = document.getElementsByClassName('contenu_panier')[0];
+            const apercu_shop = document.getElementsByClassName('total_apercu_shop')[0];
             data.forEach(data => {
                 let index = data._id - 1;
                 Click_times[index] = 1;
@@ -129,7 +132,22 @@ const getClicked = async ()  => {
                 //Button "Ajouter au panier" pressed
                 document.getElementsByClassName('buy')[index].onclick = function () {
                 if (Click_times[index] == 1) {
+                    //Display the "Valider mon panier" button
+                    document.getElementsByClassName('valider_panier')[0].style.visibility = 'visible';
+
                     //create elements
+
+                    //HTML code
+                    //<div class="items_apercu_shop">
+                    //  <div class="text_apercu_shop">
+                    //      <p class="apercu_shop_name">Nom de la peluche</p>
+                    //      <p class="apercu_shop_price">Prix de la peluche</p>
+                    //      <p class="apercu_shop_times">Nombre de fois que la peluche a été ajouter</p>
+                    //      <img src="image-poubelle">
+                    //  </div>
+                    //  <img src="photo-de-la-peluche">
+                    //</div>
+
                     var ItemContainer = document.createElement('div');
                     var TextContainer = document.createElement('div');
                     var apercu_shop_name = document.createElement('p');
@@ -149,9 +167,8 @@ const getClicked = async ()  => {
                     ItemContainer.appendChild(TextContainer);
 
                     ManageElementApercuShop(TextContainer, data, apercu_shop_name,
-                        apercu_shop_price, apercu_shop_times, index, delete_image_apercu);
-
-                    total += data.price.toFixed(2);
+                        apercu_shop_price, apercu_shop_times, index, delete_image_apercu,
+                        apercu_shop, total);
     
                 } else if (Click_times[index] > 1) {
                     var BuyItemTimes = document.getElementsByClassName(`apercu_shop_time_${index}`)[0];
@@ -162,7 +179,8 @@ const getClicked = async ()  => {
                     }
                     BuyItemTimes.innerHTML = 'x' + Click_times[index];
                     PriceItemTimes.innerHTML = price.toFixed(2) + '€';
-                    total += price;
+                    total += Number(price.toFixed(2));
+                    apercu_shop.innerHTML = 'Total: ' + total.toFixed(2) + '€';
                 }
                 Click_times[index] += 1;
             }
@@ -186,10 +204,4 @@ function closePanier() {
     for (var index = 0; index < panier.length; index++) {
       panier[index].style.display = 'none';
     }
-}
-
-const setTotal = async () => {
-    var AmoutToPay = document.getElementsByClassName('total_apercu_shop')[0];
-
-    AmoutToPay.innerHTML = total;
 }
