@@ -1,0 +1,84 @@
+@font-face {
+    font-family: ChildishFree;
+    src: url(../ressources/font/ChildishFree.otf);
+}
+
+@font-face {
+    font-family: EazyChat;
+    src: url(../ressources/font/Eazy\ Chat.ttf);
+}
+
+@font-face {
+    font-family: WinterDrink;
+    src: url(../ressources/font/Winter\ Drink.ttf);
+}
+
+@font-face {
+    font-family: LemonMilk;
+    src: url(../ressources/font/Lemon\ Milk.otf);
+}
+
+@font-face {
+    font-family: TheStudentsTeacher;
+    src: url(../ressources/font/TheStudentsTeacher-Regular.ttf);
+}
+
+* {
+    margin: 0;
+}
+
+.descr_items {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #e28b3c;
+    border-radius: 30px;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 5%;
+    margin-top: 2%;
+    padding-top: 3%;
+    padding-bottom: 3%;
+
+}
+
+.title_img {
+    display: flex;
+    flex-direction: column;
+    margin-left: 5%;
+}
+
+.info_peluche {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-right: 5%;
+    margin-left: 5%;
+    font-size: 30px;
+    font-family: TheStudentsTeacher;
+}
+
+.title_img img {
+    border-radius: 30px;
+    max-width: 30vw;
+}
+
+.title_img h2 {
+    margin-bottom: 3%;
+    font-size: 60px;
+    text-align: center;
+    font-family: WinterDrink;
+}
+
+.price {
+    display: flex;
+    flex-direction: row;
+    font-size: 30px;
+}
+
+.oldprice {
+    font-weight: bold;
+    text-decoration: line-through;
+    margin-left: 1%;
+    margin-right: 1%;
+}

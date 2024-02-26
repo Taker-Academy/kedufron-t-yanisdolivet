@@ -11,7 +11,7 @@ const getAllNamesAndImage = async () => {
                 divPeluche.classList.add('peluche');
                 itemsContainer.appendChild(divPeluche);
                 document.getElementsByClassName('peluche')[data._id - 1].onclick = function () {
-                    window.location.href = "info_peluche.html" + "?_id=" + String(data._id - 1);
+                    window.location.href = "info_peluche.html" + "?_id=" + String(data._id);
                 }
                 //create element
                 const h4Element = document.createElement('h4');
@@ -107,5 +107,14 @@ function closePanier() {
     panier = panier.length ? panier : [panier];
     for (var index = 0; index < panier.length; index++) {
       panier[index].style.display = 'none';
+    }
+}
+
+function BackToMenu()
+{
+    var menu = document.getElementsByClassName('logo_header')[0];
+
+    menu.onclick = function() {
+        window.location.href = "index.html";
     }
 }
