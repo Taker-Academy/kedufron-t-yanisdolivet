@@ -4,17 +4,17 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Câlinours</title>
-        <link rel="shortcut icon" type="image/x-icon" href="ressources/images/icon_calinours.ico" />
-        <link rel="stylesheet" href="header.css">
-        <link rel="stylesheet" href="produit.css">
-        <link rel="stylesheet" href="info_peluche.css">
-        <link rel="stylesheet" href="bandeau_info.css">
-        <link rel="stylesheet" href="footer.css">
-        <link rel="stylesheet" href="apercu_shop.css">
+        <link rel="shortcut icon" type="image/x-icon" href="../ressources/images/icon_calinours.ico" />
+        <link rel="stylesheet" href="../CSS/header.css">
+        <link rel="stylesheet" href="../CSS/produit.css">
+        <link rel="stylesheet" href="../CSS/info_peluche.css">
+        <link rel="stylesheet" href="../CSS/bandeau_info.css">
+        <link rel="stylesheet" href="../CSS/footer.css">
+        <link rel="stylesheet" href="../CSS/apercu_shop.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer">
         <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-        <script src="script.js"></script>
-        <script src="manage_shop.js"></script>
+        <script src="../JS/script.js"></script>
+        <script src="../JS/manage_shop.js"></script>
         <script>getAllNamesAndImage()</script>
         <script>getPrice()</script>
         <script>getClicked()</script>
@@ -27,7 +27,7 @@
         </div>
         <header class="Title">
             <div class="logo_header">
-                <img src="ressources/images/logo_calinours.png" alt="logo calinours">
+                <img src="../ressources/images/logo_calinours.png" alt="logo calinours">
                 <div class="brand_name">
                     <h1>Câlinours</h1>
                     <h3>l'esprit enfantin</h3>
@@ -35,29 +35,29 @@
             </div>
             <div class="pages">
                 <div class="faq">
-                    <img src="ressources/images/ours-en-peluche.png" alt="footer_ancre">
+                    <img src="../ressources/images/ours-en-peluche.png" alt="footer_ancre">
                     <a href="#" id="hebergement">FAQ</a>
-                    <img src="ressources/images/ours-en-peluche.png" alt="footer_ancre">
+                    <img src="../ressources/images/ours-en-peluche.png" alt="footer_ancre">
                 </div>
                 <div class="contact">
-                    <img src="ressources/images/ours-en-peluche.png" alt="footer_ancre">
+                    <img src="../ressources/images/ours-en-peluche.png" alt="footer_ancre">
                     <a href="#" id="activites">Contact</a>
-                    <img src="ressources/images/ours-en-peluche.png" alt="footer_ancre">
+                    <img src="../ressources/images/ours-en-peluche.png" alt="footer_ancre">
                 </div>
                 <div class="panier">
-                    <img src="ressources/images/ours-en-peluche.png" alt="footer_ancre">
+                    <img src="../ressources/images/ours-en-peluche.png" alt="footer_ancre">
                     <a href="#" id="sinscrire" onclick="openPanier()">Panier</a>
-                    <img src="ressources/images/ours-en-peluche.png" alt="footer_ancre">
+                    <img src="../ressources/images/ours-en-peluche.png" alt="footer_ancre">
                 </div>
             </div>
         </header>
         <div class="apercu_shop" id ="display_shop">
             <div class="header_apercu_shop">
                 <div class="title_shop">
-                    <img src="ressources/images/sac-de-courses.png" alt="logo sac de course" class="sac-de-courses">
+                    <img src="../ressources/images/sac-de-courses.png" alt="logo sac de course" class="sac-de-courses">
                     <h3>Mon panier</h3>
                 </div>
-                <img src="ressources/images/fermer-la-croix.png" alt="croix pour fermer le shop" class="close_shop" onclick="closePanier()">
+                <img src="../ressources/images/fermer-la-croix.png" alt="croix pour fermer le shop" class="close_shop" onclick="closePanier()">
             </div>
             <div class="contenu_panier">
                 <!-- <div class="items_apercu_shop"> -->
@@ -65,14 +65,13 @@
                       <!-- <p class="apercu_shop_name">Nom de la peluche</p> -->
                       <!-- <p class="apercu_shop_price">Prix de la peluche</p> -->
                       <!-- <p class="apercu_shop_times">Nombre de fois que la peluche a été ajouter</p> -->
-                      <!-- <img src="image-poubelle"> -->
+                      <!-- <img src="../image-poubelle"> -->
                   <!-- </div> -->
-                  <!-- <img src="photo-de-la-peluche"> -->
+                  <!-- <img src="../photo-de-la-peluche"> -->
                 <!-- </div> -->
             </div>
             <div class="footer_apercu_shop">
                 <p class="total_apercu_shop">Votre panier est vide</p></script>
-                <!-- <script>setTotal()</script> -->
                 <button class="valider_panier">Valider Mon Panier</button>
             </div>
         </div>
@@ -82,22 +81,22 @@
         </div>
         <section class="bandeau_info">
             <div class="livraison">
-                <img src="ressources/images/livraison-rapide.png" alt="logo livraison rapide">
+                <img src="../ressources/images/livraison-rapide.png" alt="logo livraison rapide">
                 <h4>Livrasin Gratuite</h4>
                 <p>Expédition dans la journée, livraison en 48h.</p>
             </div>
             <div class="rembourser">
-                <img src="ressources/images/remise-en-argent.png" alt="logo rembourser">
+                <img src="../ressources/images/remise-en-argent.png" alt="logo rembourser">
                 <h4>Satisfait ou remboursé</h4>
                 <p>Vous avez 30 jours pour changer d'avis.</p>
             </div>
             <div class="cadeau">
-                <img src="ressources/images/cadeau-de-supermarche.png" alt="logo cadeau">
+                <img src="../ressources/images/cadeau-de-supermarche.png" alt="logo cadeau">
                 <h4>Emballage cadeau offert</h4>
                 <p>Un superbe paquet cadeau comme en magasin.</p>
             </div>
             <div class="service_client">
-                <img src="ressources/images/service-client.png" alt="logo service client">
+                <img src="../ressources/images/service-client.png" alt="logo service client">
                 <h4>Service client</h4>
                 <p>Nos conseillers sont à votre écoute au 01 02 03 04 05.</p>
             </div>
@@ -109,11 +108,11 @@
                     Ces compagnons doux et câlins ne sont pas simplement des jouets, mais des partenaires qui accompagnent les enfants dans leur voyage vers la découverte du monde qui les entoure.
                     Les peluches deviennent souvent des confidentes silencieuses, offrant confort et sécurité dans des moments d'incertitude.
                     Elles sont témoins des rêves, des peurs et des joies qui façonnent les premières années de la vie, créant des liens émotionnels profonds et durables.</p>
-                <img src="ressources/images/AdobeStock_124659941.png" alt="enfant joyeux avec une peluche">
+                <img src="../ressources/images/AdobeStock_124659941.png" alt="enfant joyeux avec une peluche">
 
             </div>
             <div class="deuxieme_info">
-                <img src="ressources/images/Depositphotos_4525819_xl-2015-scaled.jpg" alt="enfant qui fait un calin à une peluche">
+                <img src="../ressources/images/Depositphotos_4525819_xl-2015-scaled.jpg" alt="enfant qui fait un calin à une peluche">
                 <p class="second_para">Les peluches jouent également un rôle essentiel dans le développement émotionnel des enfants.
                     En agissant comme des substituts affectifs, ces amis en peluche offrent une source constante de réconfort et aident à apaiser les peurs nocturnes.
                     La relation entre un enfant et sa peluche favorise le développement de compétences sociales et émotionnelles, encourageant l'empathie, la compassion et la gestion des émotions.
@@ -123,7 +122,7 @@
                 <p class="troisieme_para">Enfin, les peluches incarnent la magie de l'enfance en évoquant des souvenirs chaleureux et nostalgiques à l'âge adulte.
                     Ces compagnons en peluche ne sont pas simplement relégués au statut de jouets oubliés, mais restent des trésors sentimentaux qui évoquent les doux moments de l'enfance.
                     Ainsi, l'importance des peluches dans la vie des enfants va bien au-delà du jeu ; elles sont des partenaires de croissance, des gardiennes de secrets et des témoins précieux du passage à l'âge adulte.</p>
-                <img src="ressources/images/142a87a5-4e91-450d-ad64-875a7657e8c0.png" alt="enfant joyeux avec peluche dans les mains">
+                <img src="../ressources/images/142a87a5-4e91-450d-ad64-875a7657e8c0.png" alt="enfant joyeux avec peluche dans les mains">
             </div>
         </div>
         <footer class="footer">

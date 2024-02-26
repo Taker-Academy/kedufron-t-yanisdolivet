@@ -1,16 +1,16 @@
 @font-face {
     font-family: ChildishFree;
-    src: url(ressources/font/ChildishFree.otf);
+    src: url(../ressources/font/ChildishFree.otf);
 }
 
 @font-face {
     font-family: EazyChat;
-    src: url(ressources/font/Eazy\ Chat.ttf);
+    src: url(../ressources/font/Eazy\ Chat.ttf);
 }
 
 @font-face {
     font-family: WinterDrink;
-    src: url(ressources/font/Winter\ Drink.ttf);
+    src: url(../ressources/font/Winter\ Drink.ttf);
 }
 
 * {

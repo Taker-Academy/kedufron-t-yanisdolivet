@@ -10,7 +10,9 @@ const getAllNamesAndImage = async () => {
                 const divPeluche = document.createElement('div');
                 divPeluche.classList.add('peluche');
                 itemsContainer.appendChild(divPeluche);
-
+                document.getElementsByClassName('peluche')[data._id - 1].onclick = function () {
+                    window.location.href = "info_peluche.html" + "?_id=" + String(data._id - 1);
+                }
                 //create element
                 const h4Element = document.createElement('h4');
                 const imgElement = document.createElement('img');
