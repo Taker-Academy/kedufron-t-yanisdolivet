@@ -93,7 +93,7 @@ const getPrice = async () => {
 };
 
 function openPanier() {
-    var panier = document.getElementsByClassName('apercu_shop');
+    var panier = document.getElementsByClassName('apercu_shop')[0];
 
     panier = panier.length ? panier : [panier];
     for (var index = 0; index < panier.length; index++) {
@@ -102,7 +102,7 @@ function openPanier() {
 }
 
 function closePanier() {
-    var panier = document.getElementsByClassName('apercu_shop');
+    var panier = document.getElementsByClassName('apercu_shop')[0];
 
     panier = panier.length ? panier : [panier];
     for (var index = 0; index < panier.length; index++) {
@@ -116,6 +116,15 @@ function BackToMenu()
 
     menu.onclick = function() {
         window.location.href = "index.html";
+    }
+}
+
+function BackToMenuFooterSection()
+{
+    var menu = document.getElementsByClassName('logo_header')[0];
+
+    menu.onclick = function() {
+        window.location.href = "../index.html";
     }
 }
 

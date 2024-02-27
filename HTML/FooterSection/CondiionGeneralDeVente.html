@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" type="image/x-icon" href="../../ressources/images/icon_calinours.ico" />
+        <link rel="stylesheet" href="../../CSS/header.css">
+        <link rel="stylesheet" href="../../CSS/footer.css">
+        <link rel="stylesheet" href="../../CSS/FooterSection/ConditionGeneralDeVente.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer">
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+        <script src="../../JS/script.js"></script>
+        <script src="../../JS/descriptionItems.js"></script>
+    </head>
+    <body>
+        <div class="reduc_bandeau">
+            <div>
+                <p>A l'occasion de la taker academy: -30% sur tout le site</p>
+            </div>
+        </div>
+        <header class="Title">
+            <div class="logo_header">
+                <script>BackToMenuFooterSection()</script>
+                <a href="../index.html"></a>
+                <img src="../../ressources/images/logo_calinours.png" alt="logo calinours">
+                <div class="brand_name">
+                    <h1>Câlinours</h1>
+                    <h3>l'esprit enfantin</h3>
+                </div>
+            </div>
+            <div class="pages">
+                <div class="faq">
+                    <img src="../../ressources/images/ours-en-peluche.png" alt="footer_ancre">
+                    <a href="../FAQ.html"" id="hebergement">FAQ</a>
+                    <img src="../../ressources/images/ours-en-peluche.png" alt="footer_ancre">
+                </div>
+                <div class="contact">
+                    <img src="../../ressources/images/ours-en-peluche.png" alt="footer_ancre">
+                    <a href="../Contact.html" id="activites">Contact</a>
+                    <img src="../../ressources/images/ours-en-peluche.png" alt="footer_ancre">
+                </div>
+                <div class="panier">
+                    <img src="../../ressources/images/ours-en-peluche.png" alt="footer_ancre">
+                    <a id="sinscrire" onclick="openPanier()">Panier</a>
+                    <img src="../../ressources/images/ours-en-peluche.png" alt="footer_ancre">
+                </div>
+            </div>
+        </header>
+        <div class="condition_de_vente">
+            <h2>Conditions Géniales de Câlinours</h2>
+
+            <p class="intro">Bienvenue chez Calinours, votre espace préféré pour adopter des peluches câlines ! Avant de vous plonger dans l'univers douillet de nos adorables compagnons en peluche, voici quelques règles simples et sympas que nous avons concoctées pour assurer une expérience de shopping aussi douce que nos peluches.</p>
+                    
+            <p class="rubrique"><strong>1. Adoption d'Amour:</strong><br>
+            En passant commande sur Calinours, vous adhérez à l'idée que chaque peluche mérite un foyer rempli d'amour et de câlins. Nous nous engageons à vous offrir des produits de qualité qui apporteront une dose supplémentaire de tendresse à votre vie.</p>
+            
+            <p class="rubrique"><strong>2. Clics Responsables:</strong><br>
+            En cliquant sur "Ajouter au panier", vous confirmez votre intention d'adopter ces boules de bonheur. N'oubliez pas de vérifier votre panier avant de valider votre adoption pour vous assurer que toutes vos peluches préférées y sont bien présentes.</p>
+            
+            <p class="rubrique"><strong>3. Paiement Câlin:</strong><br>
+            Nous acceptons les paiements avec des câlins virtuels, mais malheureusement, notre fournisseur de câlins réels n'est pas encore opérationnel. Vous pouvez régler votre commande par carte bancaire, PayPal, ou en utilisant vos talents cachés de jongleur avec des pièces de monnaie.</p>
+            
+            <p class="rubrique"><strong>4. Expédition Câline:</strong><br>
+            Notre équipe dévouée prépare chaque colis avec soin et affection. Attendez-vous à recevoir votre adorable compagnon dans les plus brefs délais. Nous expédions avec le même amour que celui que vous partagez avec votre nouvelle peluche.</p>
+            
+            <p class="rubrique"><strong>5. Garantie Câline:</strong><br>
+            Si jamais votre peluche ne répond pas à vos attentes câlines, contactez-nous dans les 14 jours suivant la réception. Nous trouverons une solution pour vous assurer que votre peluche trouve le foyer parfait, même si cela signifie une mission de recherche de câlins supplémentaires.</p>
+            
+            <p class="rubrique"><strong>6. Politique Anti-Nuit Blanche:</strong><br>
+            Nous vous encourageons à passer de bonnes nuits de sommeil avec vos peluches, mais si elles deviennent les instigatrices d'une fête nocturne animée, veuillez nous en informer. Nous sommes là pour garantir que toutes les peluches adoptées sont des camarades de sommeil respectueux.</p>
+            
+            <p>Merci d'adopter avec amour chez Calinours. Nous sommes ravis de faire partie de votre voyage à travers notre site, où la douceur et la joie abondent à chaque clic.</p>
+            
+            <p><em>Câlinement vôtre,</em><br>
+            L'équipe Calinours</p>
+
+        </div>
+        <footer class="footer">
+            <div class="a_propos">
+                <p>A propos</p>
+                <button onclick="location.href='./FonctionnementDuSite.html'">Fonctionnement du site</button>
+                <button onclick="location.href='./CondiionGeneralDeVente.html'">Conditions générales de vente</button>
+                <button onclick="location.href='./DonneeEtConfidentialite.html'">Données et confidentialité</button>
+            </div>
+            <div class="nos_peluches">
+                <p>Nos peluches</p>
+                <button onclick="location.href='./CharteQualite.html'">Charte qualité</button>
+                <button onclick="location.href='./Confection.html'">Confection</button>
+            </div>
+            <div class="assistance">
+                <p>Assistance</p>
+                <button onclick="location.href='./CentreDaide.html'">Centre d'aide</button>
+                <button onclick="location.href='../Contact.html'">Nous contacter</button>
+            </div>
+        </footer>
+    </body>
+</html>

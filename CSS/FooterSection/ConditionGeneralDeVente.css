@@ -1,0 +1,53 @@
+@font-face {
+    font-family: ChildishFree;
+    src: url(../ressources/font/ChildishFree.otf);
+}
+
+@font-face {
+    font-family: EazyChat;
+    src: url(../ressources/font/Eazy\ Chat.ttf);
+}
+
+@font-face {
+    font-family: WinterDrink;
+    src: url(../ressources/font/Winter\ Drink.ttf);
+}
+
+@font-face {
+    font-family: LemonMilk;
+    src: url(../ressources/font/Lemon\ Milk.otf);
+}
+
+@font-face {
+    font-family: TheStudentsTeacher;
+    src: url(../ressources/font/TheStudentsTeacher-Regular.ttf);
+}
+
+* {
+    margin: 0;
+}
+
+.condition_de_vente {
+    margin: 3%;
+}
+
+.condition_de_vente h2 {
+    margin-bottom: 3%;
+    font-size: 40px;
+}
+
+.intro {
+    margin-bottom: 3%;
+}
+
+.condition_de_vente p {
+    font-size: 30px;
+}
+
+.rubrique {
+    margin-bottom: 2%;
+}
+
+.footer {
+    margin-top: 3%;
+}

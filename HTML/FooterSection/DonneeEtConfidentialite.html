@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" type="image/x-icon" href="../../ressources/images/icon_calinours.ico" />
+        <link rel="stylesheet" href="../../CSS/header.css">
+        <link rel="stylesheet" href="../../CSS/footer.css">
+        <link rel="stylesheet" href="../../CSS/FooterSection/ConditionGeneralDeVente.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer">
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+        <script src="../../JS/script.js"></script>
+        <script src="../../JS/descriptionItems.js"></script>
+    </head>
+    <body>
+        <div class="reduc_bandeau">
+            <div>
+                <p>A l'occasion de la taker academy: -30% sur tout le site</p>
+            </div>
+        </div>
+        <header class="Title">
+            <div class="logo_header">
+                <script>BackToMenuFooterSection()</script>
+                <a href="../index.html"></a>
+                <img src="../../ressources/images/logo_calinours.png" alt="logo calinours">
+                <div class="brand_name">
+                    <h1>Câlinours</h1>
+                    <h3>l'esprit enfantin</h3>
+                </div>
+            </div>
+            <div class="pages">
+                <div class="faq">
+                    <img src="../../ressources/images/ours-en-peluche.png" alt="footer_ancre">
+                    <a href="../FAQ.html"" id="hebergement">FAQ</a>
+                    <img src="../../ressources/images/ours-en-peluche.png" alt="footer_ancre">
+                </div>
+                <div class="contact">
+                    <img src="../../ressources/images/ours-en-peluche.png" alt="footer_ancre">
+                    <a href="../Contact.html" id="activites">Contact</a>
+                    <img src="../../ressources/images/ours-en-peluche.png" alt="footer_ancre">
+                </div>
+                <div class="panier">
+                    <img src="../../ressources/images/ours-en-peluche.png" alt="footer_ancre">
+                    <a id="sinscrire" onclick="openPanier()">Panier</a>
+                    <img src="../../ressources/images/ours-en-peluche.png" alt="footer_ancre">
+                </div>
+            </div>
+        </header>
+        <div class="condition_de_vente">
+            <h2>Politique de ConfidentialiCâlins chez Calinours</h2>
+
+            <p class="intro">Chez Calinours, la confidentialité est aussi importante que le câlin parfait. Nous nous engageons à protéger vos données avec le même amour et le même soin que celui que nous consacrons à nos adorables compagnons en peluche. Lisez ci-dessous notre Politique de ConfidentialiCâlins pour comprendre comment nous chérissons vos informations.</p>
+            
+            <p class="rubrique"><strong>1. Câlins Informatifs:</strong><br>
+            Lorsque vous explorez notre site, nous collectons des informations basiques pour rendre votre expérience plus câline. Cela inclut des données sur les pages visitées, les peluches admirées, et les clics câlins effectués. Rassurez-vous, ces informations sont utilisées uniquement pour améliorer notre site et personnaliser votre voyage peluche.</p>
+            
+            <p class="rubrique"><strong>2. Adoption Sécurisée:</strong><br>
+            Lorsque vous passez commande, nous recueillons des informations essentielles, telles que votre nom, votre adresse et vos préférences câlines. Ces données sont nécessaires pour s'assurer que vos peluches arrivent à bon port et prêtes à être câlinées. Nous ne partageons jamais ces informations avec des tiers non câlins.</p>
+            
+            <p class="rubrique"><strong>3. Cookies Chocolat-Câlin:</strong><br>
+            Nous utilisons des cookies pour rendre votre expérience en ligne encore plus délicieuse. Ces petits morceaux de bonheur numérique nous aident à personnaliser le site en fonction de vos préférences. Si vous n'aimez pas les cookies, vous pouvez les désactiver dans les paramètres de votre navigateur, mais attention, cela pourrait réduire le niveau de câlin de votre expérience.</p>
+            
+            <p class="rubrique"><strong>4. Sécurité Câline:</strong><br>
+            Nous protégeons vos données avec des câlins virtuels et des mesures de sécurité de pointe. Vos informations sont traitées avec le plus grand respect et stockées dans un endroit câlinement sécurisé. Aucun câlin non autorisé n'est autorisé.</p>
+            
+            <p class="rubrique"><strong>5. Câlins Publicitaires:</strong><br>
+            De temps en temps, vous pourriez recevoir des câlins publicitaires de notre part par e-mail. Si cela ne vous convient pas, pas de soucis ! Vous pouvez vous désabonner à tout moment en suivant le lien situé en bas de nos e-mails. Nous ne voulons pas vous inonder de câlins indésirables.</p>
+            
+            <p class="rubrique"><strong>6. Câlins Enfants:</strong><br>
+            Calinours est un site destiné à tous les âges, mais nous demandons aux enfants de moins de 13 ans d'obtenir la permission de leurs parents avant d'adopter en ligne. Les câlins sont mieux partagés en famille !</p>
+            
+            <p>Merci d'avoir pris le temps de lire notre Politique de ConfidentialiCâlins. Si vous avez des questions, des préoccupations ou simplement envie de partager un câlin virtuel, contactez-nous. Nous sommes toujours là pour vous.</p>
+            
+            <p><em>Câlinement vôtre,<br>
+            L'équipe Calinours</em></p>            
+        </div>
+        <footer class="footer">
+            <div class="a_propos">
+                <p>A propos</p>
+                <button onclick="location.href='./FonctionnementDuSite.html'">Fonctionnement du site</button>
+                <button onclick="location.href='./CondiionGeneralDeVente.html'">Conditions générales de vente</button>
+                <button onclick="location.href='./DonneeEtConfidentialite.html'">Données et confidentialité</button>
+            </div>
+            <div class="nos_peluches">
+                <p>Nos peluches</p>
+                <button onclick="location.href='./CharteQualite.html'">Charte qualité</button>
+                <button onclick="location.href='./Confection.html'">Confection</button>
+            </div>
+            <div class="assistance">
+                <p>Assistance</p>
+                <button onclick="location.href='./CentreDaide.html'">Centre d'aide</button>
+                <button onclick="location.href='../Contact.html'">Nous contacter</button>
+            </div>
+        </footer>
+    </body>
+</html>

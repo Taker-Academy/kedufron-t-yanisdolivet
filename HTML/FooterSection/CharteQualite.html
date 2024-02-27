@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" type="image/x-icon" href="../../ressources/images/icon_calinours.ico" />
+        <link rel="stylesheet" href="../../CSS/header.css">
+        <link rel="stylesheet" href="../../CSS/footer.css">
+        <link rel="stylesheet" href="../../CSS/FooterSection/ConditionGeneralDeVente.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer">
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+        <script src="../../JS/script.js"></script>
+        <script src="../../JS/descriptionItems.js"></script>
+    </head>
+    <body>
+        <div class="reduc_bandeau">
+            <div>
+                <p>A l'occasion de la taker academy: -30% sur tout le site</p>
+            </div>
+        </div>
+        <header class="Title">
+            <div class="logo_header">
+                <script>BackToMenuFooterSection()</script>
+                <a href="../index.html"></a>
+                <img src="../../ressources/images/logo_calinours.png" alt="logo calinours">
+                <div class="brand_name">
+                    <h1>Câlinours</h1>
+                    <h3>l'esprit enfantin</h3>
+                </div>
+            </div>
+            <div class="pages">
+                <div class="faq">
+                    <img src="../../ressources/images/ours-en-peluche.png" alt="footer_ancre">
+                    <a href="../FAQ.html"" id="hebergement">FAQ</a>
+                    <img src="../../ressources/images/ours-en-peluche.png" alt="footer_ancre">
+                </div>
+                <div class="contact">
+                    <img src="../../ressources/images/ours-en-peluche.png" alt="footer_ancre">
+                    <a href="../Contact.html" id="activites">Contact</a>
+                    <img src="../../ressources/images/ours-en-peluche.png" alt="footer_ancre">
+                </div>
+                <div class="panier">
+                    <img src="../../ressources/images/ours-en-peluche.png" alt="footer_ancre">
+                    <a id="sinscrire" onclick="openPanier()">Panier</a>
+                    <img src="../../ressources/images/ours-en-peluche.png" alt="footer_ancre">
+                </div>
+            </div>
+        </header>
+        <div class="condition_de_vente">
+            <h2>Charte de Qualité Câline chez Calinours</h2>
+
+            <p class="intro">Chez Calinours, la qualité est notre langage d'amour. Nous croyons que chaque peluche mérite d'être d'une qualité exceptionnelle, prête à offrir des câlins infinis. Découvrez ci-dessous notre Charte de Qualité Câline, car pour nous, la douceur est une promesse sacrée.</p>
+            
+            <p class="rubrique"><strong>1. Peluches de Première Classe:</strong><br>
+            Chaque peluche proposée chez Calinours est soigneusement sélectionnée pour sa douceur, sa résistance et son potentiel câlin. Nous nous assurons que nos compagnons en peluche répondent aux normes les plus élevées de qualité, car votre satisfaction est notre priorité absolue.</p>
+            
+            <p class="rubrique"><strong>2. Câlin-Testé et Approuvé:</strong><br>
+            Avant d'atteindre votre foyer, chaque peluche subit des tests rigoureux de câlinabilité. Nos experts en câlins garantissent que chaque ourson, lapin ou panda est prêt à offrir le câlin parfait dès la sortie de la boîte. Pas de câlins timides ici, seulement des étreintes chaleureuses et réconfortantes.</p>
+            
+            <p class="rubrique"><strong>3. Matériaux Câlins:</strong><br>
+            Les matériaux utilisés pour confectionner nos peluches sont choisis avec soin. Nous privilégions des tissus doux et hypoallergéniques pour assurer que nos peluches conviennent même aux câlins les plus délicats. La qualité de nos peluches est aussi douce que la plume d'un nuage.</p>
+            
+            <p class="rubrique"><strong>4. Respect de l'Environnement Câlin:</strong><br>
+            Chez Calinours, nous nous soucions non seulement de la qualité de nos peluches, mais aussi de l'environnement. Nous travaillons constamment pour minimiser notre empreinte câline en utilisant des matériaux durables et des pratiques respectueuses de l'environnement. Parce que câliner la Terre est tout aussi important que câliner nos peluches.</p>
+            
+            <p class="rubrique"><strong>5. Sourires Garantis:</strong><br>
+            Notre objectif ultime est de vous faire sourire avec chaque peluche adoptée. Si jamais votre peluche ne parvient pas à illuminer votre journée, contactez-nous. Nous ferons tout notre possible pour rétablir le sourire sur votre visage, car un sourire est la meilleure récompense pour notre équipe.</p>
+            
+            <p class="rubrique"><strong>6. Politique Anti-Nuit Blanche:</strong><br>
+            Nous vous encourageons à passer de bonnes nuits de sommeil avec vos peluches, mais si elles deviennent les instigatrices d'une fête nocturne animée, veuillez nous en informer. Nous sommes là pour garantir que toutes les peluches adoptées sont des camarades de sommeil respectueux.</p>
+            
+            <p>Merci de choisir Calinours, où la qualité et la douceur se rencontrent pour créer des moments inoubliables de tendresse.</p>
+            
+            <p><em>Câlinement vôtre,<br>
+            L'équipe Calinours</em></p>
+            
+        </div>
+        <footer class="footer">
+            <div class="a_propos">
+                <p>A propos</p>
+                <button onclick="location.href='./FonctionnementDuSite.html'">Fonctionnement du site</button>
+                <button onclick="location.href='./CondiionGeneralDeVente.html'">Conditions générales de vente</button>
+                <button onclick="location.href='./DonneeEtConfidentialite.html'">Données et confidentialité</button>
+            </div>
+            <div class="nos_peluches">
+                <p>Nos peluches</p>
+                <button onclick="location.href='./CharteQualite.html'">Charte qualité</button>
+                <button onclick="location.href='./Confection.html'">Confection</button>
+            </div>
+            <div class="assistance">
+                <p>Assistance</p>
+                <button onclick="location.href='./CentreDaide.html'">Centre d'aide</button>
+                <button onclick="location.href='../Contact.html'">Nous contacter</button>
+            </div>
+        </footer>
+    </body>
+</html>
