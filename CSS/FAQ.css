@@ -1,0 +1,56 @@
+@font-face {
+    font-family: ChildishFree;
+    src: url(../ressources/font/ChildishFree.otf);
+}
+
+@font-face {
+    font-family: EazyChat;
+    src: url(../ressources/font/Eazy\ Chat.ttf);
+}
+
+@font-face {
+    font-family: WinterDrink;
+    src: url(../ressources/font/Winter\ Drink.ttf);
+}
+
+@font-face {
+    font-family: LemonMilk;
+    src: url(../ressources/font/Lemon\ Milk.otf);
+}
+
+@font-face {
+    font-family: TheStudentsTeacher;
+    src: url(../ressources/font/TheStudentsTeacher-Regular.ttf);
+}
+
+* {
+    margin: 0;
+}
+
+.questions {
+    background-color: #e28b3c;
+    border-radius: 30px;
+    text-align: justify;
+    padding-top: 3%;
+    padding-bottom: 0.1%;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 3%;
+}
+
+.title_faq h1 {
+    margin-top: 2%;
+    text-align: center;
+}
+
+.questions h2 {
+    margin-bottom: 0.5%;
+    margin-left: 3%;
+}
+
+.questions p {
+    margin-bottom: 3%;
+    margin-left: 3%;
+    margin-right: 3%;
+    font-size: 20px;
+}

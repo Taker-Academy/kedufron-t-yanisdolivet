@@ -118,3 +118,12 @@ function BackToMenu()
         window.location.href = "index.html";
     }
 }
+
+function HideDivWhenSendAMessage()
+{
+    var div = document.getElementsByClassName('formulaire')[0];
+    var Retour = document.getElementsByClassName('message_sent')[0];
+
+    div.style.display = 'none';
+    Retour.style.display = 'block';
+}

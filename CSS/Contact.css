@@ -1,0 +1,99 @@
+@font-face {
+    font-family: ChildishFree;
+    src: url(../ressources/font/ChildishFree.otf);
+}
+
+@font-face {
+    font-family: EazyChat;
+    src: url(../ressources/font/Eazy\ Chat.ttf);
+}
+
+@font-face {
+    font-family: WinterDrink;
+    src: url(../ressources/font/Winter\ Drink.ttf);
+}
+
+@font-face {
+    font-family: LemonMilk;
+    src: url(../ressources/font/Lemon\ Milk.otf);
+}
+
+@font-face {
+    font-family: TheStudentsTeacher;
+    src: url(../ressources/font/TheStudentsTeacher-Regular.ttf);
+}
+
+* {
+    margin: 0;
+}
+
+.formulaire {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 3%;
+    margin-left: 25%;
+    margin-right: 5%;
+    padding: 3%;
+    background-color: #e28b3c;
+    border-radius: 30px;
+    width: 50%;
+}
+
+.name {
+    width: 100%;
+    display: flex;
+    align-items:  center;
+    justify-content: space-between;
+}
+
+.firstname, .surname {
+    resize: none;
+    width: 50%;
+    margin-bottom: 1%;
+}
+
+.mail {
+    resize: none;
+    margin-bottom: 1%;
+    padding: 0;
+    width: 100%;
+}
+
+.message {
+    resize: none;
+    width: 100%;
+    margin-bottom: 3%;
+    vertical-align: top;
+}
+
+.send_message {
+    align-items: center;
+    background-color: #fff;
+    border-radius: 24px;
+    border-style: none;
+    box-shadow: rgba(0, 0, 0, .2) 0 3px 5px -1px, rgba(0, 0, 0, .14) 0 6px 10px 0, rgba(0, 0, 0, .12) 0 1px 18px 0;
+    font-size: 14px;
+    height: 48px;
+    max-width: 100%;
+    padding: 2px 24px;
+    text-align: center;
+    text-transform: none;
+    transition: box-shadow 280ms cubic-bezier(.4, 0, .2, 1),opacity 15ms linear 30ms,transform 270ms cubic-bezier(0, 0, .2, 1) 0ms;
+    width: auto;
+}
+
+.send_message:hover {
+  background: #670209;
+  color: white;
+}
+
+.message_sent {
+    display: none;
+    margin: 3%;
+    text-align: center;
+}
+
+.message_sent h1 {
+    margin-bottom: 2%;
+}
