@@ -10,9 +10,6 @@ const getAllNamesAndImage = async () => {
                 const divPeluche = document.createElement('div');
                 divPeluche.classList.add('peluche');
                 itemsContainer.appendChild(divPeluche);
-                document.getElementsByClassName('peluche')[data._id - 1].onclick = function () {
-                    window.location.href = "info_peluche.html" + "?_id=" + String(data._id);
-                }
                 //create element
                 const h4Element = document.createElement('h4');
                 const imgElement = document.createElement('img');
@@ -23,6 +20,7 @@ const getAllNamesAndImage = async () => {
 
                 //name a class name
                 h4Element.classList.add('peluche_title');
+                imgElement.classList.add('peluche_image');
 
                 //append element
                 divPeluche.appendChild(h4Element);
@@ -135,4 +133,33 @@ function HideDivWhenSendAMessage()
 
     div.style.display = 'none';
     Retour.style.display = 'block';
+}
+
+const OpenDescription = async () => {
+    try {
+        const response = await axios.get(url);
+        if (response.status === 200) {
+            const data = response.data;
+            data.forEach(data => {
+                document.getElementsByClassName('peluche_title')[data._id - 1].onclick = function () {
+                    window.location.href = "info_peluche.html" + "?_id=" + String(data._id);
+                }
+                document.getElementsByClassName('peluche_image')[data._id - 1].onclick = function () {
+                    window.location.href = "info_peluche.html" + "?_id=" + String(data._id);
+                }
+                document.getElementsByClassName('old_price')[data._id - 1].onclick = function () {
+                    window.location.href = "info_peluche.html" + "?_id=" + String(data._id);
+                }
+                document.getElementsByClassName('current_prce')[data._id - 1].onclick = function () {
+                    window.location.href = "info_peluche.html" + "?_id=" + String(data._id);
+                }
+            });
+        } else {
+            console.error('Request failed with status:', response.status);
+            return null;
+        }
+    } catch (error) {
+        console.error('Axios error:', error);
+        return null;
+    }
 }

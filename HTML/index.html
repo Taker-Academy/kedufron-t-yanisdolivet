@@ -15,9 +15,6 @@
         <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
         <script src="../JS/script.js"></script>
         <script src="../JS/manage_shop.js"></script>
-        <script>getAllNamesAndImage()</script>
-        <script>getPrice()</script>
-        <script>getClicked()</script>
     </head>
     <body>
         <div class="reduc_bandeau">
@@ -52,6 +49,13 @@
                 </div>
             </div>
         </header>
+        <div class="shop">
+            <div class="achat_peluche">
+                <script>getAllNamesAndImage()</script>
+                <script>getPrice()</script>
+                <script>OpenDescription()</script>
+            </div>
+        </div>
         <div class="apercu_shop" id ="display_shop">
             <div class="header_apercu_shop">
                 <div class="title_shop">
@@ -61,23 +65,12 @@
                 <img src="../ressources/images/fermer-la-croix.png" alt="croix pour fermer le shop" class="close_shop" onclick="closePanier()">
             </div>
             <div class="contenu_panier">
-                <!-- <div class="items_apercu_shop"> -->
-                  <!-- <div class="text_apercu_shop"> -->
-                      <!-- <p class="apercu_shop_name">Nom de la peluche</p> -->
-                      <!-- <p class="apercu_shop_price">Prix de la peluche</p> -->
-                      <!-- <p class="apercu_shop_times">Nombre de fois que la peluche a été ajouter</p> -->
-                      <!-- <img src="../image-poubelle"> -->
-                  <!-- </div> -->
-                  <!-- <img src="../photo-de-la-peluche"> -->
-                <!-- </div> -->
+                <script>FillPanier()</script>
+                <script>AddToShop()</script>
             </div>
             <div class="footer_apercu_shop">
                 <p class="total_apercu_shop">Votre panier est vide</p></script>
                 <button class="valider_panier">Valider Mon Panier</button>
-            </div>
-        </div>
-        <div class="shop">
-            <div class="achat_peluche">
             </div>
         </div>
         <section class="bandeau_info">
