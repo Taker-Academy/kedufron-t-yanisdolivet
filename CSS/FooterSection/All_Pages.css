@@ -27,27 +27,6 @@
     margin: 0;
 }
 
-.condition_de_vente {
-    margin: 3%;
-}
-
-.condition_de_vente h2 {
-    margin-bottom: 3%;
-    font-size: 40px;
-}
-
-.intro {
-    margin-bottom: 3%;
-}
-
-.condition_de_vente p {
-    font-size: 30px;
-}
-
-.rubrique {
-    margin-bottom: 2%;
-}
-
-.footer {
-    margin-top: 3%;
+.all {
+    padding: 5%;
 }

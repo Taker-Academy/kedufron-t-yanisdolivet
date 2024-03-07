@@ -38,12 +38,26 @@
     padding-right: 10%;
     font-family: WinterDrink;
     font-size: 25px;
+    @media (max-width: 1262px) {
+        font-size: 15px;
+    }
+    @media (max-width: 820px) {
+        font-size: 20px;
+        padding: 0;
+        margin-bottom: 5%;
+    }
 }
 
 .info_sur_peluche img {
     border-top-right-radius: 30px;
     border-bottom-right-radius: 30px;
     max-width: 30vw;
+    @media (max-width: 820px) {
+        border-top-right-radius: 0;
+        border-bottom-left-radius: 30px;
+        border-bottom-right-radius: 30px;
+        max-width: 100%;
+    }
 }
 
 .premier_info, .deuxieme_info, .troisieme_info {
@@ -55,6 +69,12 @@
     border-radius: 60px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     transition: transform 330ms ease-in-out;
+    @media (max-width: 820px) {
+        flex-direction: column;
+    }
+    @media (max-width: 570px) {
+        padding: 10%;
+    }
 }
 
 .premier_info:hover, .deuxieme_info:hover, .troisieme_info:hover {
@@ -64,6 +84,10 @@
 .deuxieme_info p {
     padding-right: 0;
     padding-left: 10%;
+    @media (max-width: 820px) {
+        padding: 0;
+        margin-top: 5%;
+    }
 }
 
 .deuxieme_info img {
@@ -71,6 +95,11 @@
     border-bottom-right-radius: 0;
     border-top-left-radius: 30px;
     border-bottom-left-radius: 30px;
+    @media (max-width: 820px) {
+        border-top-left-radius: 30px;
+        border-bottom-left-radius: 0;
+        border-top-right-radius: 30px;
+    }
 }
 
 .troisieme_info {

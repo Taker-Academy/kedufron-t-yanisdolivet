@@ -162,3 +162,12 @@
   color: white;
 }
 
+.change_times {
+    display: flex;
+    flex-direction: row;
+}
+
+.change_times img {
+    margin-left: 6%;
+    margin-right: 6%;
+}
