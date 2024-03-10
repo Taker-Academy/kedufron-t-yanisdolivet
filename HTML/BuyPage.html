@@ -13,6 +13,7 @@
         <script src="../JS/script.js"></script>
         <script src="../JS/manage_buy_page.js"></script>
         <script src="../JS/descriptionItems.js"></script>
+        <script src="../JS/create_form.js"></script>
     </head>
     <body>
         <div class="reduc_bandeau">
@@ -77,7 +78,94 @@
                         <button class="validate_promo"> Valider</button>
                     </div>
                 </div>
+                <div class="montant">
+                    <div class="cart">
+                        <div class="panier_recap">
+                            <p>Panier</p>
+                            <p class="nb_of_product">(x produits)</p>
+                            <script>DisplayNbItems()</script>
+                        </div>
+                        <p class="prix_total">x€</p>
+                        <script>DisplayTotal()</script>
+                    </div>
+                    <div class="livraison">
+                        <div class="frai_de_livraison">
+                            <img src="../ressources/images/livraison-rapide.png" alt="camion_de_livraison">
+                            <p>Frais de livraison</p>
+                        </div>
+                        <p>Gratuit</p>
+                    </div>
+                    <div class="total_tva_incluse">
+                        <h5>Total (TVA incluse)</h5>
+                        <p class="prix_total">x€</p>
+                        <script>DisplayTotal()</script>
+                    </div>
+                    <button class="finaliser_paiement" onclick="show_final_paiement()">Finaliser le paiement</button>
+                </div>
+                <div class="moyen_de_paiment">
+                    <h5>Nous acceptons</h5>
+                    <div class="image_moyen_de_paiement">
+                        <div class="visa">
+                            <div class="visa_bw">
+                                <img src="../ressources/images/visa_bw.png" class="bw" alt="visa_bw">
+                            </div>
+                            <div class="visa_color">
+                                <img src="../ressources/images/visa_color.png" class="color" alt="visa_color">
+                            </div>
+                        </div>
+                        <div class="american-express">
+                            <div class="american-express_bw">
+                                <img src="../ressources/images/symboles.png" class="bw" alt="american-express_bw">
+                            </div>
+                            <div class="american-express_color">
+                                <img src="../ressources/images/american-express.png" class="color" alt="american-express_color">
+                            </div>
+                        </div>
+                        <div class="cb">
+                            <div class="cb_bw">
+                                <img src="../ressources/images/logo-cb_bw.jpg" class="bw" alt="cb_bw">
+                            </div>
+                            <div class="cb_color">
+                                <img src="../ressources/images/logo-cb.jpg" class="color" alt="cb_color">
+                            </div>
+                        </div>
+                        <div class="MasterCard_Logo">
+                            <div class="MasterCard_Logo_bw">
+                                <img src="../ressources/images/MasterCard_Logo_bw.png" class="bw" alt="MasterCard_Logo_bw">
+                            </div>
+                            <div class="MasterCard_Logo_color">
+                                <img src="../ressources/images/MasterCard_Logo.svg.png" class="color" alt="MasterCard_Logo_color">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="paiement_securise">
+                        <img>
+                        <p>Paimement 100% securisé</p>
+                    </div>
+                </div>
             </div>
+        </div>
+        <div class="paiement_final">
+            <form>
+                <label for="fname">Prénom</label>
+                <input type="text" id="fname" name="firstname" placeholder="Jacques">
+                <label for="lname">Nom</label>
+                <input type="text" id="lname" name="lastname" placeholder="Dutronc">
+                <label for="email">Email</label>
+                <input type="text" id="email" name="email" placeholder="jacques.dutronc@gmail.com">
+                <label for="country">Country</label>
+                <label for="adress">Adresse</label>
+                <input type="text" id="adress" name="firstname" placeholder="23 rue des fleurs">
+                <label for="rue">Code Postale</label>
+                <input type="text" id="rue" name="lastname" placeholder="00701">
+                <label for="cb">Code</label>
+                <input type="text" id="cb" name="cb" placeholder="0000-0000-0000-000">
+                <label for="name_owner">Titulaire de la carte</label>
+                <input type="text" id="name_owner" name="name_owner" placeholder="Mr Dutronc">
+                <label for="cvv">CVV</label>
+                <input type="text" id="cvv" name="cvv" placeholder="123">
+                <button class="send" onclick="sendForm()">Payer</button>
+            </form>
         </div>
         <footer class="footer">
             <div class="a_propos">

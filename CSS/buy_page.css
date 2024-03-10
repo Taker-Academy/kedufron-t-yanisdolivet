@@ -114,16 +114,18 @@
 .total {
     margin-top: 4%;
     margin-right: 8%;
-    padding: 3%;
-    width: 27%;
-    height: fit-content;
-    border-radius: 20px 20px 20px 20px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    background-color: white;
+    width: 30%;
 }
 
 .code_promo {
     align-items: center;
+    padding: 5%;
+    width: 100%;
+    height: fit-content;
+    border-radius: 20px 20px 20px 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color: white;
+    margin-bottom: 5%;
 }
 
 .input_promo {
@@ -155,4 +157,181 @@
 .validate_promo:hover {
     background: #670209;
     color: white;
+}
+
+.montant {
+    padding: 5%;
+    width: 100%;
+    height: fit-content;
+    border-radius: 20px 20px 20px 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color: white;
+}
+
+.montant .cart {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 5%;
+    padding-bottom: 6%;
+    border-bottom: solid;
+    border-bottom-width: 2px;
+    border-bottom-color: #bbb;
+}
+
+.montant .cart p{
+    font-size: 20px;
+}
+
+.panier_recap {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.nb_of_product {
+    margin-left: 1%;
+    color: gray;
+}
+
+.livraison {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 20px;
+    padding-top: 5%;
+    padding-bottom: 6%;
+    border-bottom: solid;
+    border-bottom-width: 2px;
+    border-bottom-color: #bbb;
+}
+
+.livraison img {
+    width: 50px;
+}
+
+.frai_de_livraison {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+}
+
+.frai_de_livraison p {
+    padding-left: 1%;
+}
+
+.total_tva_incluse {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 20px;
+    padding-top: 5%;
+    padding-bottom: 6%;
+    border-bottom: solid;
+    border-bottom-width: 2px;
+    border-bottom-color: #bbb;
+}
+
+.finaliser_paiement {
+    display: flex;
+    margin: auto;
+    margin-top: 5%;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 24px;
+    border-style: none;
+    box-shadow: rgba(0, 0, 0, .2) 0 3px 5px -1px, rgba(0, 0, 0, .14) 0 6px 10px 0, rgba(0, 0, 0, .12) 0 1px 18px 0;
+    font-size: 14px;
+    height: 40px;
+    max-width: 100%;
+    padding: 2px 24px;
+    text-align: center;
+    text-transform: none;
+    transition: box-shadow 280ms cubic-bezier(.4, 0, .2, 1),opacity 15ms linear 30ms,transform 270ms cubic-bezier(0, 0, .2, 1) 0ms;
+    width: 40%;
+}
+
+.finaliser_paiement:hover {
+    background: #670209;
+    color: white;
+}
+
+.moyen_de_paiment {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-top: 5%;
+    font-size: 20px;
+    padding: 5%;
+    border-radius: 20px 20px 20px 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color: white;
+}
+
+.image_moyen_de_paiement {
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    margin-top: 2%;
+    padding-left: 5%;
+    padding-right: 5%;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.color, .bw {
+    width: 100px;
+}
+
+.visa_color, .american-express_color, .cb_color, .MasterCard_Logo_color {
+  display: none;
+}
+
+.visa:hover .visa_color, .cb:hover .cb_color, .american-express:hover .american-express_color, .MasterCard_Logo:hover .MasterCard_Logo_color {
+  display: block;
+}
+
+.visa:hover .visa_bw, .cb:hover .cb_bw, .american-express:hover .american-express_bw, .MasterCard_Logo:hover .MasterCard_Logo_bw {
+    display: none;
+}
+
+.paiement_final {
+    display: none;
+    margin: auto;
+    margin-top: 5%;
+    width: 70%;
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+    align-items: center;
+}
+
+input[type=text], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.send {
+    width: 100%;
+    background-color: #e28b3c;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.send:hover {
+    background-color: #ca7729;
 }

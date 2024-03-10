@@ -1,8 +1,6 @@
 const count = new Array();
 let total_price = 0;
 
-// localStorage.removeItem("cart");
-
 if (!localStorage.getItem("cart")) {
     console.log("cart not found!");
     let cart = [];
@@ -132,13 +130,13 @@ function AddtoShop(data, index, count)
         times: count[index],
     };
     document.getElementsByClassName('valider_panier')[0].style.visibility = 'visible';
-    if (cart[index].times === 0) {
+    if (count[index] === 1) {
         cart[index] = dict;
         DisplayShop(index);
-    } else if (cart[index].times > 1) {
+    } else if (count[index] > 1) {
         document.getElementsByClassName(`apercu_shop_time_${index}`)[0].textContent = 'x' + cart[index].times;
     }
-    cart[index].times += 1;
+    count[index] += 1;
     return cart[index];
 }
 
@@ -149,7 +147,9 @@ const ChangeQuantites = async () => {
         data.forEach(data => {
             let index = data._id - 1;
             if (document.getElementsByClassName(`add_peluche_${index}`)[0]) {
-                AddPeluche(index);
+                document.getElementsByClassName(`add_peluche_${index}`)[0].onclick = function () {
+                    AddPeluche(index);
+                }
             }
             if (document.getElementsByClassName(`remove_peluche_${index}`)[0]) {
                 RemovePeluche(index, total_price)
